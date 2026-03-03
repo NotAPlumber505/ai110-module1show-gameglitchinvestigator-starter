@@ -8,6 +8,13 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
 
+Bugs found:
+1. When the same number is guessed, the "attempts allowed" do not go down even though they should go down when you guess (the number does not go down on the frontend, but in the backend it does as shown in the developer debug information).
+2. After making only a few guesses, the game was already over, and my "attempts" allowed did not go down in the UI to 0 when this happened.
+3. When I switched difficulties after the game was over, it would not let me restart and be stuck on game over. I had to refresh the website to restart my game, as the "New Game" button does not restart the game.
+4. The "attempts left" for each difficulty is one off between the sidebar's number and the number shown on the main page.
+5. Guesses beyond ranges (i.e., "range: 1 to 100") but guessing -1 or 150, for example, should be considered "invalid guesses" and not counted towards attempts, but they are counted in the application, indicating that these ranges are not explicitly enforced.
+
 ---
 
 ## 2. How did you use AI as a teammate?
