@@ -1,5 +1,3 @@
-# 🎮 Game Glitch Investigator: The Impossible Guesser
-
 ## 🚨 The Situation
 
 You asked an AI to build a simple "Number Guessing Game" using Streamlit.
@@ -43,7 +41,8 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+- [X] [Insert a screenshot of your fixed, winning game here]
+<img width="2509" height="1388" alt="image" src="https://github.com/user-attachments/assets/904e1c68-9aae-4248-8b4d-d04b5e5844e9" />
 
 ## 🚀 Stretch Features
 
