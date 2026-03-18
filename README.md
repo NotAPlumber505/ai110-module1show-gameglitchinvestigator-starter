@@ -25,9 +25,21 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] Describe the game's purpose.
+   - The game is a number guessing challenge where the player tries to find a secret number within a limited number of attempts.
+   - It gives directional feedback (go higher or go lower) and tracks score based on outcomes and attempt count.
+
+- [x] Detail which bugs you found.
+   - Attempts left shown in the UI was inconsistent with backend state and could appear off by one.
+   - Game-over and restart flow was broken in some paths, including difficulty changes and New Game behavior.
+   - Out-of-range guesses were not handled as fair invalid inputs in gameplay flow.
+   - State-related reruns made behavior feel inconsistent from click to click.
+
+- [x] Explain what fixes you applied.
+   - Kept critical game state in Streamlit session state and reset it through a dedicated `reset_game(...)` function.
+   - Stabilized secret number behavior so it persists during play and only changes on explicit reset/difficulty reset.
+   - Enforced range validation through shared logic helpers and aligned attempts/status handling with expected game flow.
+   - Verified logic outcomes with `pytest` and validated state/rerun behavior through manual gameplay checks.
 
 ## 📸 Demo
 
